@@ -19,8 +19,7 @@ import { DiscussionTopic, IDiscussionTopic } from "../models/DiscussionTopic/Dis
 
 const ProgressDashboard = () => {
   const [searchParams] = useSearchParams();
-
-  let studentId  = searchParams.get('student_id')
+  let studentId  = searchParams.get('student_id') ?? '102817723'
 
   const { data, isError, isLoading, error } = useQuery<any, Error>(
     ['studentProgressData', studentId],

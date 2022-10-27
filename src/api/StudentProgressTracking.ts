@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export const fetchStudentProgressByStudentId = async (studentId: string = '102817723') => {
-  console.log(studentId)
   try {
     const { data } = await axios.get<any>(
       process.env.REACT_APP_BACKEND_API+ `/student-progression-dashboard-data/${studentId}`,
